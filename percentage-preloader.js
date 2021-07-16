@@ -1,8 +1,3 @@
-/*!
- * pace.js v1.2.4
- * https://github.com/CodeByZach/pace/
- * Licensed MIT © HubSpot, Inc.
- */
 (function() {
 	var AjaxMonitor, Bar, DocumentMonitor, ElementMonitor, ElementTracker, EventLagMonitor, Evented, Events, NoTargetError, Pace, RequestIntercept, SOURCE_KEYS, Scaler, SocketRequestTracker, XHRRequestTracker, addEventListener, animation, avgAmplitude, bar, cancelAnimation, cancelAnimationFrame, defaultOptions, extend, extendNative, getFromDOM, getIntercept, handlePushState, ignoreStack, init, now, options, requestAnimationFrame, result, runAnimation, scalers, shouldIgnoreURL, shouldTrack, source, sources, uniScaler, _WebSocket, _XDomainRequest, _XMLHttpRequest, _i, _intercept, _len, _pushState, _ref, _ref1, _replaceState,
 		__slice = [].slice,
@@ -275,7 +270,7 @@
 				this.el.className = "pace pace-active";
 				document.body.className = document.body.className.replace(/(pace-done )|/, 'pace-running ');
 				var _custom_class_name = (options.className !== '') ? ' '+options.className : '';
-				this.el.innerHTML = '<div class="pace-progress'+_custom_class_name+'">\n  <div class="pace-progress-inner"></div>\n</div>\n<div class="pace-activity"></div>';
+				this.el.innerHTML = '<div class="pace-progress'+_custom_class_name+'">\n  <div class="pace-progress-inner"></div>\n</div>\n<div class="pace-activity">Loading %</div>';
 				if (targetElement.firstChild != null) {
 					targetElement.insertBefore(this.el, targetElement.firstChild);
 				} else {
