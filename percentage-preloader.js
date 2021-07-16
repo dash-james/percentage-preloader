@@ -313,14 +313,14 @@
 				return false;
 			}
 			el = this.getElement();
-			transform = "translate3d(" + this.progress + "%, 0, 0)";
+			/*transform = "translate3d(" + this.progress + "%, 0, 0)";
 			_ref2 = ['webkitTransform', 'msTransform', 'transform'];
 			for (_j = 0, _len1 = _ref2.length; _j < _len1; _j++) {
 				key = _ref2[_j];
 				el.children[0].style[key] = transform;
-			}
+			}*/
 			if (!this.lastRenderedProgress || this.lastRenderedProgress | 0 !== this.progress | 0) {
-				el.children[0].setAttribute('data-progress-text', "" + (this.progress | 0) + "%");
+				el.children[0].setAttribute('data-progress-text', "" + (this.progress | 0));
 				if (this.progress >= 100) {
 					progressStr = '99';
 				} else {
